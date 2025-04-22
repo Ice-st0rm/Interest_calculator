@@ -1,38 +1,52 @@
-##This code is a financial calculator that helps you understand how your savings grow over time, either showing your wealth after a certain number of years or calculating how long it will take to reach a financial goal.
-#There are 3 main parts:
+# Financial Freedom Calculator
 
-    #wealth_by_years()
+A Python program that calculates either:
+- Your projected wealth over a set number of years, or
+- How many years until you reach a target wealth amount
 
-        Shows how your money grows each year for a set period
+## Functions
 
-        Takes your current savings, monthly/yearly savings amount, and investment return rate
+### `wealth_by_years(current_wealth, monthly_save, yearly_save, rate_of_return, years)`
+Calculates and displays annual wealth growth over a specified period.
 
-        Calculates and prints your total wealth year by year
+**Parameters:**
+- `current_wealth`: Your current total savings/investments
+- `monthly_save`: Amount saved each month (set to 0 if using yearly savings)
+- `yearly_save`: Amount saved each year (set to 0 if using monthly savings)
+- `rate_of_return`: Expected annual investment return percentage
+- `years`: Number of years to project growth
 
-    #years_till_freedom()
+**Returns:**
+- Final total wealth after the specified period
 
-        Calculates how many years until you reach a target savings amount
+### `years_till_freedom(current_wealth, monthly_save, yearly_save, rate_of_return, target_wealth)`
+Calculates how many years until reaching a target wealth amount.
 
-        Works similarly but keeps counting years until you hit your goal
+**Parameters:**
+- `current_wealth`: Your current total savings/investments
+- `monthly_save`: Amount saved each month (set to 0 if using yearly savings)
+- `yearly_save`: Amount saved each year (set to 0 if using monthly savings)
+- `rate_of_return`: Expected annual investment return percentage
+- `target_wealth`: Desired wealth amount to achieve
 
-        Tells you when you'll reach "financial freedom" (your target)
+**Returns:**
+- Number of years required to reach the target
 
-    #main()
+## Usage
+Run `main()` to start the interactive program which will prompt for:
+1. Calculation type (wealth projection or years to freedom)
+2. Savings frequency (monthly or yearly)
+3. Financial values (current wealth, savings amount, return rate)
+4. Either:
+   - Number of years for projection, or
+   - Target wealth amount
 
-        The user interface that asks what you want to calculate
+The program will then display the results.
 
-        Asks whether you save monthly or yearly
-
-        Gathers all the needed numbers (current savings, savings amount, return rate, etc.)
-
-        Then runs either wealth_by_years or years_till_freedom based on your choice
-
-#How it works:
-
-    Your money grows through both your regular savings and investment returns
-
-    Each year, it adds your savings (monthly*12 or yearly amount) to your total
-
-    Then it applies the investment return (like interest) to the whole amount
-
-    This repeats year after year until either the time period ends or you reach your goal
+## How It Works
+For each year:
+1. Adds annual savings (either monthly ×12 or yearly amount)
+2. Applies the rate of return to the total
+3. Repeats until either:
+   - The specified number of years is reached, or
+   - The target wealth amount is achieved
