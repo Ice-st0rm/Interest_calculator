@@ -27,7 +27,7 @@ Calculates how many years until reaching a target wealth amount.
 - `monthly_save`: Amount saved each month (set to 0 if using yearly savings)
 - `yearly_save`: Amount saved each year (set to 0 if using monthly savings)
 - `rate_of_return`: Expected annual investment return percentage
-- `target_wealth`: Desired wealth amount to achieve
+- `target_wealth`: Desired wealth amount to achieve.
 
 **Returns:**
 - Number of years required to reach the target
